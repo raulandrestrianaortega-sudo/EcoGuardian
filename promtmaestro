@@ -1,0 +1,320 @@
+# PROMPT MAESTRO: ECOGUARDIAN IA
+## Desarrollo, documentación y evolución de un prototipo funcional mediante ingeniería de prompts
+
+### 1. ROL Y CONTEXTO
+
+Actúa como un ingeniero de software senior especializado en inteligencia artificial, ingeniería de requisitos, desarrollo web, diseño UX/UI, arquitectura de software, sostenibilidad ambiental y metodologías de desarrollo iterativo mediante prompts.
+
+Tu tarea consiste en diseñar, desarrollar, probar y documentar **EcoGuardian IA**, una plataforma web orientada a facilitar la clasificación y gestión de residuos sólidos en un campus educativo.
+
+El resultado debe ser un prototipo funcional, navegable, visualmente atractivo, coherente con sus requerimientos y preparado para una demostración académica.
+
+No te limites a describir la solución: implementa el código, crea las interfaces y verifica que las funcionalidades disponibles operen correctamente.
+
+### 2. DESCRIPCIÓN DEL PROBLEMA
+
+En los campus educativos pueden presentarse dificultades para separar adecuadamente los residuos, identificar la caneca correcta, conocer los procedimientos de disposición y reportar problemas en los puntos ecológicos.
+
+Estas situaciones pueden generar una separación inadecuada de materiales aprovechables, orgánicos y no aprovechables, además de dificultar la identificación de puntos que necesitan atención.
+
+EcoGuardian IA busca proporcionar una herramienta digital que facilite estas actividades mediante una interfaz accesible, recomendaciones de clasificación y un sistema demostrativo de reportes.
+
+No afirmes que se han medido impactos ambientales reales sin disponer de datos verificables.
+
+### 3. OBJETIVO GENERAL
+
+Desarrollar un prototipo web de EcoGuardian IA que permita consultar la clasificación de residuos, mostrar recomendaciones de disposición, visualizar imágenes de referencia, registrar reportes anónimos y consultar estadísticas básicas de funcionamiento.
+
+### 4. OBJETIVOS ESPECÍFICOS
+
+1. Diseñar una interfaz moderna, intuitiva y adaptable a diferentes dispositivos.
+2. Implementar un módulo de selección y clasificación de residuos.
+3. Mostrar la categoría, el destino recomendado y las instrucciones de preparación.
+4. Incorporar una interfaz para cargar y visualizar imágenes.
+5. Implementar el registro de reportes anónimos sobre problemas de gestión de residuos.
+6. Crear un panel administrativo demostrativo con estadísticas y reportes.
+7. Establecer requerimientos funcionales y no funcionales verificables.
+8. Realizar pruebas de aceptación y corregir los errores encontrados.
+9. Documentar la evolución del sistema mediante iteraciones de prompts.
+10. Diferenciar las funcionalidades implementadas de aquellas que requieren servicios externos.
+
+### 5. USUARIOS DEL SISTEMA
+
+**Usuario general:** consulta información sobre residuos y recomendaciones de disposición.
+
+**Miembro de la comunidad educativa:** registra reportes sobre canecas llenas, puntos ecológicos dañados, residuos mal separados y problemas de señalización.
+
+**Administrador:** consulta estadísticas y reportes, y revisa las reglas de clasificación. En el prototipo, esta vista es demostrativa y no representa un acceso protegido.
+
+### 6. REQUERIMIENTOS FUNCIONALES
+
+Implementa los siguientes requerimientos:
+
+- **RF-01. Página de inicio:** mostrar el nombre del proyecto, su propósito, navegación principal y acceso al módulo de clasificación.
+- **RF-02. Selección de residuos:** permitir seleccionar distintos tipos de residuos, como botellas plásticas, papel, cartón, residuos orgánicos, latas, servilletas usadas, vidrio, pilas y envases multicapa.
+- **RF-03. Clasificación:** determinar la categoría del residuo seleccionado mediante reglas configuradas y mostrar la recomendación correspondiente.
+- **RF-04. Recomendaciones:** proporcionar instrucciones para preparar el residuo antes de desecharlo.
+- **RF-05. Carga de imágenes:** permitir seleccionar una imagen y visualizar una vista previa.
+- **RF-06. Reportes anónimos:** registrar incidentes relacionados con la gestión de residuos.
+- **RF-07. Validación de reportes:** exigir el tipo de incidente y el lugar, y permitir una descripción opcional.
+- **RF-08. Consulta de reportes:** mostrar los reportes registrados durante la sesión actual.
+- **RF-09. Estadísticas:** contabilizar las clasificaciones y los reportes realizados durante la sesión.
+- **RF-10. Panel administrativo:** presentar un resumen de actividad, los reportes y las reglas disponibles.
+- **RF-11. Reinicio de demostración:** permitir restablecer las estadísticas y los reportes de prueba.
+- **RF-12. Navegación:** permitir cambiar entre Inicio, Clasificar residuo, Reportes y Administración sin enlaces rotos.
+- **RF-13. Mensajes del sistema:** mostrar confirmaciones, errores de validación y mensajes comprensibles para el usuario.
+- **RF-14. Manejo de imágenes:** validar que los archivos seleccionados sean imágenes compatibles.
+
+### 7. REQUERIMIENTOS NO FUNCIONALES
+
+- **RNF-01. Usabilidad:** ofrecer una interfaz intuitiva y fácil de comprender.
+- **RNF-02. Adaptabilidad:** funcionar visualmente en computadores, tabletas y teléfonos móviles.
+- **RNF-03. Rendimiento:** establecer un objetivo de respuesta de tres segundos o menos para la clasificación mediante reglas, sujeto a pruebas.
+- **RNF-04. Privacidad:** no solicitar datos personales innecesarios.
+- **RNF-05. Mantenibilidad:** mantener organizadas las reglas, la lógica de negocio y las interfaces.
+- **RNF-06. Accesibilidad:** utilizar textos legibles, controles identificables, contraste adecuado y mensajes claros.
+- **RNF-07. Compatibilidad:** procurar compatibilidad con navegadores modernos.
+- **RNF-08. Confiabilidad:** evitar recomendaciones contradictorias y permitir adaptar las reglas a las disposiciones locales.
+- **RNF-09. Seguridad:** validar las entradas y establecer controles de acceso antes de publicar una versión real.
+- **RNF-10. Escalabilidad:** permitir una futura integración con una base de datos, servicios de IA y sistemas institucionales.
+
+Los objetivos de rendimiento y calidad deben validarse mediante pruebas; no los presentes como resultados comprobados sin mediciones.
+
+### 8. REGLAS DE CLASIFICACIÓN
+
+Implementa reglas configurables para las siguientes categorías:
+
+1. Residuos aprovechables.
+2. Residuos orgánicos aprovechables.
+3. Residuos no aprovechables.
+4. Residuos especiales que necesitan puntos de recepción específicos.
+
+Para cada residuo, muestra:
+
+- Nombre del residuo.
+- Categoría.
+- Color o tipo de recipiente recomendado.
+- Instrucciones para prepararlo.
+- Precauciones relevantes.
+- Observaciones cuando la recepción dependa del municipio o del operador local.
+
+Utiliza como referencia la normativa colombiana vigente, incluida la Resolución 2184 de 2019 y las disposiciones que la modifiquen o complementen, verificando su aplicabilidad antes de presentar las reglas como definitivas.
+
+No asumas que todos los residuos especiales pueden depositarse en las canecas comunes. Para pilas y baterías, por ejemplo, indica que deben llevarse a un punto de recepción autorizado.
+
+### 9. DISEÑO UX/UI
+
+Construye una interfaz moderna con identidad ambiental.
+
+**Identidad visual:**
+- Verde oscuro como color principal.
+- Verde claro para fondos y elementos secundarios.
+- Blanco y gris claro para mantener legibilidad.
+- Iconografía relacionada con reciclaje, naturaleza y sostenibilidad.
+- Tarjetas con bordes redondeados, espacios consistentes y jerarquía visual clara.
+
+**Estructura de navegación:**
+1. Inicio.
+2. Clasificar residuo.
+3. Reportes.
+4. Administración.
+
+**Página de inicio:**
+- Nombre y propósito del sistema.
+- Mensaje principal sobre sostenibilidad.
+- Acceso directo a la clasificación.
+- Indicadores de actividad de demostración.
+- Explicación breve del funcionamiento.
+
+**Módulo de clasificación:**
+- Selector de residuos.
+- Carga de imágenes con vista previa.
+- Botón de clasificación.
+- Panel de resultados.
+- Instrucciones y precauciones.
+
+**Módulo de reportes:**
+- Tipo de incidente.
+- Lugar del campus.
+- Descripción opcional.
+- Confirmación del registro.
+- Lista de reportes de la sesión.
+
+**Panel administrativo:**
+- Cantidad de clasificaciones.
+- Cantidad de reportes.
+- Lista de incidencias.
+- Catálogo de reglas.
+- Acción para reiniciar los datos de demostración.
+
+El diseño debe adaptarse al tamaño de pantalla y permitir que los usuarios comprendan las acciones sin instrucciones adicionales.
+
+### 10. ARQUITECTURA DEL PROTOTIPO
+
+Organiza la solución en componentes lógicos:
+
+- Presentación: páginas, formularios, navegación y resultados.
+- Lógica de negocio: reglas de clasificación y validaciones.
+- Gestión de reportes: creación, listado y actualización de contadores.
+- Estado de la aplicación: estadísticas y datos temporales.
+- Catálogo de reglas: información configurable de los residuos.
+
+Si se implementa en un solo archivo, mantén funciones claramente separadas y evita duplicar la lógica.
+
+En esta primera versión se permite utilizar datos en memoria y reglas predefinidas, siempre que las limitaciones estén documentadas.
+
+No afirmes que existe persistencia entre sesiones, autenticación, reconocimiento de imágenes mediante IA o conexión a una base de datos si esas funcionalidades no están realmente implementadas.
+
+### 11. INGENIERÍA DE PROMPTS E ITERACIONES
+
+Desarrolla el proyecto mediante un proceso iterativo. Cada iteración debe responder a una necesidad identificada y mejorar el resultado anterior.
+
+**Iteración 1. Definición del producto**
+
+Establecer el problema, los usuarios, el objetivo, los módulos y el alcance.
+
+Resultado esperado: estructura inicial del proyecto.
+
+**Iteración 2. Diseño de interfaz**
+
+Definir la identidad visual, la navegación, la distribución de los módulos y la adaptación móvil.
+
+Resultado esperado: interfaz visual coherente y navegable.
+
+**Iteración 3. Clasificación de residuos**
+
+Implementar el catálogo de residuos, las reglas de clasificación, los colores de recipientes y las recomendaciones.
+
+Resultado esperado: clasificación demostrativa funcional.
+
+**Iteración 4. Reportes y administración**
+
+Incorporar formularios validados, reportes anónimos, estadísticas y catálogo administrativo.
+
+Resultado esperado: interacción funcional entre los módulos.
+
+**Iteración 5. Pruebas y correcciones**
+
+Probar los recorridos principales, detectar errores, corregir validaciones, revisar los mensajes y verificar la adaptación móvil.
+
+Resultado esperado: prototipo estable para demostración.
+
+**Iteración 6. Refinamiento final**
+
+Revisar la consistencia visual, la documentación, los requerimientos y las limitaciones técnicas.
+
+Resultado esperado: versión final documentada.
+
+Estas seis iteraciones constituyen un plan de trabajo propuesto, no un historial comprobado de iteraciones previas.
+
+En cada iteración real debes registrar:
+- Número y objetivo de la iteración.
+- Prompt exacto utilizado.
+- Problema detectado en la versión anterior.
+- Cambios solicitados.
+- Cambios efectivamente implementados.
+- Resultado de las pruebas.
+- Limitaciones que permanecen.
+- Justificación de por qué se necesita una nueva iteración.
+
+No inventes prompts históricos ni afirmes que un cambio se realizó si no se puede verificar.
+
+### 12. PLAN DE PRUEBAS Y CRITERIOS DE ACEPTACIÓN
+
+Realiza como mínimo las siguientes pruebas:
+
+**Prueba 1: navegación**
+- Recorrer los cuatro módulos.
+- Resultado esperado: todos se abren correctamente.
+
+**Prueba 2: clasificación válida**
+- Seleccionar una botella plástica.
+- Resultado esperado: mostrar categoría, recipiente y recomendaciones.
+
+**Prueba 3: selección vacía**
+- Intentar clasificar sin elegir un residuo.
+- Resultado esperado: mostrar un mensaje de validación.
+
+**Prueba 4: imagen**
+- Seleccionar un archivo de imagen válido.
+- Resultado esperado: mostrar su vista previa.
+- Aclaración: la vista previa no demuestra reconocimiento automático.
+
+**Prueba 5: reporte incompleto**
+- Intentar enviar un reporte sin lugar.
+- Resultado esperado: impedir el registro y solicitar el campo obligatorio.
+
+**Prueba 6: reporte completo**
+- Registrar un incidente con tipo y lugar.
+- Resultado esperado: mostrar el reporte en la lista.
+
+**Prueba 7: estadísticas**
+- Realizar una clasificación y registrar un reporte.
+- Resultado esperado: actualizar los contadores correspondientes.
+
+**Prueba 8: reinicio**
+- Utilizar la opción de reiniciar.
+- Resultado esperado: restablecer las estadísticas y eliminar los reportes de demostración.
+
+**Prueba 9: adaptación móvil**
+- Abrir la interfaz en una pantalla estrecha.
+- Resultado esperado: mantener legibles los textos y accesibles los controles.
+
+**Prueba 10: consistencia de reglas**
+- Revisar diferentes tipos de residuos.
+- Resultado esperado: presentar recomendaciones coherentes y advertir cuando se requiera un punto especializado.
+
+Documenta cada prueba con su resultado real: aprobada, fallida o pendiente. No declares una prueba aprobada sin ejecutarla.
+
+### 13. COMPARACIÓN DE ITERACIONES
+
+Genera una tabla con estas columnas:
+
+| Iteración | Prompt utilizado | Problema anterior | Cambio solicitado | Cambio implementado | Resultado de la prueba |
+
+Completa la tabla con los datos reales disponibles.
+
+Si no se dispone del historial original, identifica explícitamente las iteraciones como propuestas o reconstruidas. No inventes evidencias ni atribuyas cambios al historial original.
+
+Al finalizar, explica qué aportó cada iteración y por qué la versión final es más completa que la inicial.
+
+### 14. ALCANCE Y LIMITACIONES
+
+La versión inicial debe priorizar un prototipo funcional que permita demostrar los recorridos principales.
+
+Documenta expresamente si todavía faltan:
+- Reconocimiento de imágenes mediante un modelo de IA.
+- Persistencia de datos en una base de datos.
+- Autenticación y autorización.
+- Integración con servicios externos.
+- Pruebas de rendimiento en condiciones reales.
+- Despliegue en un servidor institucional.
+
+No presentes funciones simuladas como implementaciones reales.
+
+### 15. ENTREGABLES
+
+Produce los siguientes entregables:
+
+1. Prototipo web funcional y navegable.
+2. Código fuente organizado y ejecutable.
+3. Prompt maestro completo.
+4. Requerimientos funcionales y no funcionales.
+5. Plan de iteraciones.
+6. Comparativa de prompts e iteraciones con evidencia disponible.
+7. Plan de pruebas y resultados verificados.
+8. Descripción de la arquitectura.
+9. Lista de funcionalidades implementadas y pendientes.
+10. Guion breve para demostrar el prototipo.
+
+### 16. INSTRUCCIÓN FINAL
+
+Antes de modificar el proyecto existente, inspecciona su estructura y conserva las funcionalidades que ya funcionan.
+
+Implementa los requerimientos pendientes de acuerdo con el alcance solicitado. No reemplaces toda la aplicación sin justificarlo.
+
+Prioriza la funcionalidad, la claridad, la consistencia visual y la facilidad de demostración.
+
+Al finalizar, proporciona un resumen de los cambios realizados, las pruebas ejecutadas, los resultados obtenidos y las limitaciones restantes.
+
+**El objetivo final es entregar EcoGuardian IA como un prototipo académico funcional, verificable y documentado, cuya evolución pueda explicarse mediante ingeniería de prompts.**
